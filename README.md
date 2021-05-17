@@ -1,6 +1,6 @@
-# Android Login Example
+# RxJava Android example
 
-This example shows how to create an Android application and add a login feature to it. For further details, please read [Android Login Made Easy with OIDC][blog].
+This is an example Android app which demonstrates how to use RxJava framework to communicate with a Spring Boot web app, which is secured by Okta OICD. 
 
 **Prerequisites:**
 
@@ -16,11 +16,34 @@ This example shows how to create an Android application and add a login feature 
 
 ## Getting Started
 
+Clone the Spring Boot web app:
+
+```bash
+git clone git@github.com:oktadeveloper/okta-spring-webflux-react-example.git reactive-spring-boot
+cd reactive-spring-boot/reactive-web
+```
+
+Signup with Okta and create your first application:
+
+```bash
+okta register
+okta apps create
+```
+
+Copy your Okta values from `.okta.env` into the `reactive-spring-boot/reactive-web/src/main/resources/application.yml` file.
+You can also use the instructions in [this](https://github.com/oktadev/okta-spring-webflux-react-example#getting-started) repo’s getting started section.
+
+Run the server by running the command:
+
+```bash
+./mvnw
+```
+
 Clone this example's source code:
 
 ```bash
-git clone https://github.com/oktadeveloper/okta-android-login-example.git
-cd okta-android-login-example
+git clone https://github.com/oktadeveloper/okta-rx-java-android-example.git
+cd okta-rx-java-android-example
 ```
 
 Signup with Okta and create your first application:
@@ -61,7 +84,7 @@ manifestPlaceholders = [
 ]
 ```
 
-Press the play icon in the top right part of Android Studio. You should be able to log in with your Okta credentials.
+Press the play icon in the top right part of Android Studio. You should be able to log in with your Okta credentials and create/update/delete posts.
 
 ## Links
 
